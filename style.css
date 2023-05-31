@@ -1,0 +1,133 @@
+:root {
+    --dark-gradient: linear-gradient(to right, MidnightBlue, Maroon)
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color-scheme: light dark;
+}
+
+.wrapper {
+    inline-size: min(100% - 4rem, 100rem);
+    margin-inline: auto; 
+    padding: 5rem;
+}
+
+.section-title {
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+    padding: 1.5rem 1rem;
+}
+
+p {
+    font-family: system-ui;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+/* isolation: isolate */
+
+.isolation-section {
+    background: var(--dark-gradient);
+}
+
+.isolation {
+    position: relative;
+    isolation: isolate;
+}
+
+.isolation::before {
+    content: open-quote;
+    font-family: serif;
+    font-weight: 900;
+    font-size: 15rem;
+    color: #3c3c3c;
+    position: absolute;
+    z-index: -1;
+    top: -4.5rem;
+    left: -2.5rem;
+}
+
+/* this makes it so if you use the quotes more then once, it keeps both quotes */
+.isolation::after {
+    content: no-close-quote;
+}
+
+/* inset */
+
+.inset-section {
+    position: relative;
+    border: 5px dotted yellow;
+}
+
+.inset {
+    position: absolute;
+    /* top: 1rem;
+    right: 2rem;
+    bottom: 1rem;
+    left: 50%; */
+    inset: auto 1rem 2rem 1rem;
+    background-color: indigo;
+    padding: 1rem;
+}
+
+/* CSS counters */
+
+section {
+    counter-increment: section-counter;
+}
+
+.section-title::before {
+    opacity: 0.5;
+    content: counter(section-counter) ". ";
+}
+
+/* Filters */
+
+.card-container {
+    display: flex;
+}
+
+.card {
+    display: grid;
+    gap: 1rem;
+    background: hsl(0 0% 50% / 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 20rem;
+    margin: 1rem;
+}
+
+.card__img {
+    filter: grayscale(100%) contrast(200%);
+    transition: filter 500ms ease;
+    max-width: 100%;
+}
+
+.card:hover > .card__img,
+.card:focus-within > .card_img {
+    filter: grayscale(0%) contrast(100%);
+}
+
+/* CSS contain */
+
+.contain-section {
+    contain: style;
+    background: darkred;
+}
+
+.contain-section .section-title {
+    font-size: 1.5rem;
+    counter-increment: section-counter;
+}

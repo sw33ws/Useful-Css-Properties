@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful-Css-Properties</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <section class="isolation-section">
+        <div class="wrapper">
+            <h2 class="section-title">Isolation</h2>
+
+            <div class="isolation">
+                <p>The <code>isolation</code>property is useed to create a new stacking content without any other side effects</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inset-section">
+        <div class="wrapper">
+            <h2 class="section-title">Inset</h2>
+            <p>The <code>inset</code> propery is part of the logical property spec, and is a shorthand for <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> properties, in that order. it works a lot like the <code>margin</code>, and <code>padding</code>.</p>
+            <div class="inset"><strong>simple example</strong></div>
+        </div>
+    </section>
+
+    <section class="counter-section">
+        <div class="wrapper">
+            <h2 class="section-title">Css Counters</h2>
+            <p>The <code>counter</code> function let's you turn basically anything into a numbered list, at least visually.</p>
+            <p>You can also use it to change how ordered lists are counted.</p>
+            <p>There are a lot of cool cases for counter()!</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="wrapper">
+            <h2 class="section-title">Filters</h2>
+            <p>The <code>filter</code> property lets us do some interesting effects, including manipulating images and other interesting things</p>
+
+            <div class="card-container">
+                <div class="card">
+                    <p>Article Title</p>
+                    <img class="card__img" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80">
+                    <p>Card description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatum nihil saepe, est sed perspiciatis neque quo illo exercitationem assumenda.</p>
+                </div>
+
+                <div class="card">
+                    <p>Article Title</p>
+                    <img class="card__img" src="https://images.unsplash.com/photo-1468436139062-f60a71c5c892?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                    <p>Card description Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contain-section">
+        <div class="wrapper">
+
+            <h2 class="section-title">CSS Contain</h2>
+            <p>The <code>contain</code> property allows you to tell the browser that certain aspects of an element shouldn't have an effect anything outside of that element.</p>
+
+            <h3 class="section-title">Why you might use <code>contain</code></h2>
+            <p>It is import for things like container queries, but outside of that, can be useful for performance issues as animations within a contained element will not cause layout recalculations on other elements.</p>
+
+            <h3 class="section-title">A simpleuse use case</h2>
+            <p>For our purposes though we'll stick to a very simple example</p>
+
+        </div>
+    </section>
+</body>
+</html>
